@@ -18,8 +18,15 @@ describe("Testing of Engineer class", () => {
 
     it("getRole Function Should return the Engineer Role", () => {
       const testRole = "Engineer";
-      const testUser = new Engineer(1, "John Doe", "test@email.com");
-      expect(testUser.getRole()).toBe(testRole);
+      const testEngineer = new Engineer(1, "John Doe", "test@email.com");
+      expect(testEngineer.getRole()).toBe(testRole);
+    });
+
+    it("getGitHub function should return test gitHub var", () => {
+      const testGitHub = "testGitHub";
+      const testEngineer = new Engineer(1, "John Doe", "test@email.com", testGitHub);
+
+      expect(testEngineer.getGithub()).toBe(testGitHub);
     });
   });
 });
