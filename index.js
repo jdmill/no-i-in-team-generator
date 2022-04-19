@@ -52,46 +52,65 @@ function createEmployee() {
   inquirer.prompt([
     {
       type: "input",
-      name: "empName",
+      name: "name",
       message: "Enter Employee's Name"
     },
     {
       type: "number",
-      name: "empId",
+      name: "id",
       message: "Enter Employee's ID number"
     },
     {
       type: 'input',
-      name: 'empEmail',
+      name: 'email',
       message: "Enter Employee's Email address"
     },
     {
       type: "list",
-      name: "empType",
+      name: "type",
       message: "Select Employee Type",
       choices: ["Engineer", "Intern"]
     },
     {
       type: "input",
-      name: "empGithub",
+      name: "github",
       message: "Enter Engineer's Github URL",
-      when:(answers) => answers.empType === "Engineer"
+      when:(answers) => answers.type === "Engineer",
     },
     {
-      type: "list",
-      name: "empSchool",
+      type: "input",
+      name: "school",
       message: "Enter Intern's School",
-      when:(answers) => answers.empType === "Intern"
+      when:(answers) => answers.type === "Intern",
     }
   ])
     .then(answers => {
-      console.log(answers)
+      console.log(answers.github);
+      console.log(answers.school);
+      switch (answers.type) {
+        case ("Engineer"):
+          const engineer = new Engineer(answers.name,answers.id,answers.email,answers.github);
+          teamProfiles.push(engineer);
+          addTeamMember();
+          break;
+        
+        case ("Intern"):
+          const intern = new Intern(
+            answers.name,
+            answers.id,
+            answers.email,
+            answers.school
+          );
+          teamProfiles.push(intern);
+          addTeamMember();
+          break;
+      }
     })
 }
 
 //assembles team 
 function createTeam() {
-
+  console.log(teamProfiles);
 }
 
 //checks to see if new team member should be added.
