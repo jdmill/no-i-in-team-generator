@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #293241;
+  --secondary-color: #ee6c4d;
+  --tertiary-color: #e0fbfc;
+  --color-2: #98c1d9;
+  --color-3: #3d5a80;
+}
+
+* {
+  background-color: #98c1d9;
+}
+
+#header {
+  font-size: 4vw;
+  text-align: center;
+  background-color: #ee6c4d;
+  color: #293241;
+}
+
+#footer {
+  font-size: 2vw;
+  text-align: center;
+  color:#e0fbfc;
+}
+

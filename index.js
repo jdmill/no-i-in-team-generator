@@ -1,5 +1,5 @@
 //imports Classes
-const Employee = require("./lib/Employee");
+const genHTML = require("./dist/genHTML")
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
@@ -110,7 +110,7 @@ function createEmployee() {
 
 //assembles team 
 function createTeam() {
-  console.log(teamProfiles);
+  fs.writeFileSync('./dist/team.html', genHTML(teamProfiles));
 }
 
 //checks to see if new team member should be added.
