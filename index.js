@@ -74,7 +74,7 @@ function createEmployee() {
     {
       type: "input",
       name: "github",
-      message: "Enter Engineer's Github URL",
+      message: "Enter Engineer's Github username",
       when:(answers) => answers.type === "Engineer",
     },
     {

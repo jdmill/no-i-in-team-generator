@@ -49,7 +49,7 @@ printEngineer = (engineer) => {
                 <h3 class="title">Engineer <i class="bi-gear-wide-connected"></i></h3>
                   <h4 class="name">${engineer.name}</h4>
                     <p class="id text">ID: ${engineer.id}</p>
-                    <p class="github text">Github: <a href="https://github.com/${engineer.github}"></a></p>
+                    <p class="github text">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
                     <p class="email text">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
                     </div>
                 </div>`;

@@ -8,10 +8,14 @@
 
 * {
   background-color: #98c1d9;
+  color: #293241;
 }
 
 i {
   background-color:#e0fbfc;
+}
+p{
+  font-size: 1.5rem;
 }
 .container {
   display: flex;
@@ -21,6 +25,10 @@ i {
   flex-basis: 80%;
   justify-content: center;
   
+}
+
+.name {
+  font-size: 1.75rem;
 }
 
 .team-member {
@@ -45,14 +53,14 @@ i {
 
 
 #header {
-  font-size: 4vw;
+  font-size: 3rem;
   text-align: center;
   background-color: #ee6c4d;
   color: #293241;
 }
 
 #footer {
-  font-size: 2vw;
+  font-size: 2rem;
   text-align: center;
   color:#e0fbfc;
 }
